@@ -27,25 +27,21 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-2">
 
+            @foreach ($comics as $comic)
+                <div class="col-2">
 
-                @foreach ($comics as $comic)
-                    <div class="card ">
+                    <div class="card my-3">
 
-                        <h5><img src="{{ $comic->image }}" alt=""></h5>
-                        <h5>Title: {{ $comic->title }}</h5>
+                        <img src="{{ $comic->image }}" alt="">
+                        <h6>Title: {{ $comic->title }}</h6>
                         <p>Genere: {{ $comic->type }}</p>
 
                     </div>
-                @endforeach
 
-                {{-- @dump($comic) --}}
+                </div>
+            @endforeach
 
-
-
-
-            </div>
         </div>
     </div>
 
