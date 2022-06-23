@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
-.card {
-  height: 400px;
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.lm-card {
+  height: 300px;
+}
+.lm-card .col-text h6,
+.lm-card .col-text p {
+  font-size: 14px;
+  color: #fff;
+}
+.lm-card .image {
+  height: 200px;
+  overflow: hidden;
 }

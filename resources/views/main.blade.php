@@ -26,16 +26,21 @@
     @include('partials.footer')
 
     <div class="container">
-        <div class="row">
+        <div class="row row-cols-6">
 
             @foreach ($comics as $comic)
-                <div class="col-2">
+                <div class="col">
 
-                    <div class="card my-3">
+                    <div class="lm-card my-3">
 
-                        <img src="{{ $comic->image }}" alt="">
-                        <h6>Title: {{ $comic->title }}</h6>
-                        <p>Genere: {{ $comic->type }}</p>
+                        <div class="image">
+                            <img src="{{ $comic->image }}" alt="{{ $comic->title }}">
+                        </div>
+
+                        <div class="col-text p-3 text-center">
+                            <h6>Title: {{ $comic->title }}</h6>
+                            <p>Genere: {{ $comic->type }}</p>
+                        </div>
 
                     </div>
 
